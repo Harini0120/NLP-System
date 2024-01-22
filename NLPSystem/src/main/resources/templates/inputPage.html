@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>NLP Input</title>
+</head>
+
+<body style="background-color:#FFFEFA;">
+
+    <h1 align="center">NLP Input Page</h1>
+    <hr>
+
+    <form action="/processText" method="post" enctype="multipart/form-data">
+        <label for="textInput">Enter Text:</label>
+        <textarea id="textInput" name="textInput" rows="4" cols="50"></textarea>
+        <br>
+        <label for="fileInput">Upload Text File:</label>
+        <input type="file" id="fileInput" name="fileInput">
+        <br>
+        <input type="submit" value="Generate NLP Statistics">
+    </form>
+
+</body>
+
+</html>

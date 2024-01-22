@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Comparison Page</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Comparison Page</h2>
+    <div>
+        <a th:href="@{/logout}" style="float: right; margin-right: 20px;">Logout</a>
+    </div>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Average Score of Input</th>
+            <th>Average Score of Aggregated Results File</th>
+        </tr>
+        <tr>
+            <td>Word Frequency</td>
+            <td>
+      <th:block th:if="${averageWordFrequencyInput != null}" th:text="${#numbers.formatDecimal(averageWordFrequencyInput,1,2)}"></th:block>
+   </td>
+            <td>
+                <th:block th:if="${averageAggregatedWordFrequency != null}" th:text="${#numbers.formatDecimal(averageAggregatedWordFrequency,1,2)}"></th:block>
+            </td>
+        </tr>
+        <tr>
+            <td>Sentiment Score</td>
+            <td>
+      <th:block th:if="${averageSentimentScoreInput != null}" th:text="${#numbers.formatDecimal(averageSentimentScoreInput,1,2)}"></th:block>
+   </td>
+            <td>
+                <th:block th:if="${averageAggregatedSentimentScore != null}" th:text="${#numbers.formatDecimal(averageAggregatedSentimentScore,1,2)}"></th:block>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

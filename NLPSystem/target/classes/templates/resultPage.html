@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Page</title>
+</head>
+<body>
+    <h1>NLP Statistics Results</h1>
+    <!-- Add this button to trigger the comparison at the top with bigger size -->
+    <!-- Add this button to trigger the comparison at the top with bigger size -->
+<!-- Add this form in resultPage.html -->
+<form method="post" action="/compareResults" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="aggregatedResultsFile">Upload Aggregated Results File</label>
+        <input type="file" class="form-control" id="aggregatedResultsFile" name="aggregatedResultsFile" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Compare Results</button>
+</form>
+
+
+<!-- Your existing content to display NLP statistics -->
+<div th:utext="${nlpStatistics}"></div>
+    
+</body>
+</html>
