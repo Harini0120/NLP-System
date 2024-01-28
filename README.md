@@ -42,4 +42,4 @@ The system incorporates the Stanford NLP library for text processing and analysi
 Average values for word frequency and sentiment scores are calculated and stored in the session for comparison.
 Security configurations are defined in SecurityConfig.java.
 The application supports file upload for comparing results.
-Feel free to explore and modify the code based on your requirements. If you encounter any issues, please refer to the documentation or open an issue in the repository.
+
